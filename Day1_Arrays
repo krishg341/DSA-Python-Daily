@@ -1,0 +1,6 @@
+# Day 1: Find max and min in an array
+
+arr = [10, 3, 25, 7, 18]
+
+print("Max:", max(arr))
+print("Min:", min(arr))
