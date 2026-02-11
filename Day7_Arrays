@@ -1,0 +1,28 @@
+class Solution:
+    def maximumCount(self, nums: List[int]) -> int:
+        n=len(nums)
+        left=0
+        right=len(nums)-1
+        pos=n
+        while left<=right:
+            mid=(left+right)//2
+            if nums[mid]>0:
+                pos=mid
+                right=mid-1
+            else:
+                left=mid+1
+        left,right=0,n-1
+        neg=n
+        while left<=right:
+            mid=(left+right)//2
+            if nums[mid]>=0:
+                neg=mid
+                right=mid-1
+            else:
+                left=mid+1
+        GK=n-pos
+        gk=neg
+        return max(GK,gk)
+
+        
+        
